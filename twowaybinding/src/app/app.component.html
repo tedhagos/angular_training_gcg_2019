@@ -1,0 +1,23 @@
+
+<h1>{{name}}</h1>
+<p><em>{{name}} is in region {{region}}</em></p>
+
+<input [value] = 'name' type="text"><br>
+<input [value] = 'name' type="text" (input)="name=$event.target.value"><br>
+<input [value] = 'name' type="text" (keyup)="name=$event.target.value"><br>
+<p></p>
+
+<div>
+  <fieldset>
+    <label>Street: </label>{{street}} <br>
+    <label>City:</label> {{ city }} <br>
+    <label>Region:</label>
+    <select #regionref (change)='changeRegion($event.target.value)'>
+      <option>I</option>
+      <option>II</option>
+      <option>III</option>
+      <option>IV</option>
+      <option>V</option>
+    </select>
+  </fieldset>
+</div>

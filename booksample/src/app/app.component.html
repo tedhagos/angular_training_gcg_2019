@@ -1,0 +1,14 @@
+<div *ngIf = 'books && books.length'>
+  <div *ngFor = 'let book of books' id="container">
+    <div id="book-image">
+      <img src='/assets/img/{{book.image}}' title="{{book.name}}" [style.width]="imageWidth"/>
+    </div>
+    <div id="book-details">
+        <h2>{{book.name}}</h2>
+        Author: {{book.author}} <br>
+        Price : {{book.price}} <br>
+        Rating: {{book.rating}} <br>
+      
+    </div>
+  </div>
+</div>

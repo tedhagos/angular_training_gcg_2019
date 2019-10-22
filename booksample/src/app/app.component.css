@@ -1,0 +1,26 @@
+* {
+  font-family: sans-serif;
+}
+html, body {
+  margin:0;
+  height: 100%;
+}
+
+#container {
+  padding: 1em;
+  /* border: 1px solid gray; */
+  margin-bottom: 0.5em;
+  display: flex;
+}
+
+#book-image {
+  margin-right: 0.5em;
+  width: 11em;
+}
+
+#book-details {
+  flex-grow: 2;
+  margin-left: 0.5em;
+}
+
+

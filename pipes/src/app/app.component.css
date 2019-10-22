@@ -1,0 +1,8 @@
+* {
+  font-family: sans-serif;
+}
+
+thead {
+  text-align: left;
+  border-bottom: 2px solid gray;
+}

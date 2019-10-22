@@ -1,0 +1,33 @@
+<html>
+  <h1>{{lastname}} , {{firstname}}</h1>
+  <img [src]='imageUrl' title="{{lastname}},{{firstname}}"
+    [style.width]='imageWidth'><br>
+
+  <em>
+    {{firstname}}  {{lastname}} is in region {{region}}
+  </em>
+<br>
+<button (click)='hideAddress()' >{{buttonLabel}}</button>
+<!-- <div [hidden]='hiddenAddress'> -->
+<div>
+  <fieldset>
+      <label>{{street}}</label><br>
+      <label>{{city}}</label><br>
+      <!-- <select #reg (change)='changeRegion(reg.value)'> -->
+        <select #regEl (change)='changeRegion($event.target.value)'>
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+        <option>NCR</option>
+        <option>IV</option>
+      </select>
+    </fieldset>
+</div>
+
+<div>
+  <ul *ngFor="let b of books">
+    <li>{{b}}</li>
+  </ul>
+</div>
+
+</html>

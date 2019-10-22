@@ -1,0 +1,19 @@
+
+
+<table>
+  <thead>
+    <tr>
+      <th>number</th>
+      <th>English</th>
+      <th>Espanol</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let num of numbers">
+        <td>{{num}}</td>
+        <td>{{num | numToEnglish }}</td>
+        <td>{{num}}</td>
+      </tr>
+    </tbody>
+
+</table>
