@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let book of books">
-      <td>{{book.name }}</td>
+      <td>{{book.name | lowercase }}</td>
       <td>{{book.author}}</td>
       <td>{{book.price | currency:'USD':true:'1.2-2'}}</td>
       <td>{{book.rating}}</td>

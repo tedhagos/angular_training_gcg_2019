@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NumToEnglish } from './app.pipes.eng';
+import { TestPipe } from './app.pipe.test';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NumToEnglish    
+    NumToEnglish, 
+    TestPipe   
   ],
   imports: [
     BrowserModule

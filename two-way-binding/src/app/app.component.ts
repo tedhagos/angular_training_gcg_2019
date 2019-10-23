@@ -10,9 +10,8 @@ import { Component } from '@angular/core';
       type="text"><br/>
     <input 
       [value]="name" 
-      (input)="name=$event.target.value" 
-      type="text">  
-      `
+      (keyup)="name=$event.target.value" 
+      type="text">`
 })
 export class AppComponent {
   name: string = "John Doe"
