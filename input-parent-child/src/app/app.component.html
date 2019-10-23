@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <tr *ngFor="let num of numbers">
+      <td>{{num}}</td>
+      <td><app-child [rating]="num"></app-child></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul *ngFor="let num of numbers">
+  <li>{{num}} <app-child [rating]='num'></app-child></li>
+</ul>
