@@ -1,0 +1,13 @@
+
+<table>
+  <tbody>
+    <tr *ngFor="let rating of ratings">
+      <td>{{rating}}</td>
+      <td>
+        <app-rating
+          [starRating]="rating">
+        </app-rating>
+      </td>
+    </tr>
+  </tbody>
+</table>

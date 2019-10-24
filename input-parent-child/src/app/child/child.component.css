@@ -3,4 +3,8 @@
 
 .crop {
   border: 1px solid red;
+  background: black;
+}
+.stardiv {
+  width: 75px;
 }
