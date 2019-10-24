@@ -15,6 +15,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  /*
+  if useHash is false, your app will use HTML5 style routing; which
+  means, you need to configure URL rewriting on the server side.
+  If you don't want to configure URL rewriting on the server side,
+  use the old style of client side routing, by setting useHash 
+  to true
+  */
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
