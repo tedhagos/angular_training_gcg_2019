@@ -1,0 +1,21 @@
+
+<input type="text" (change)="onFilter($event.target.value)">
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>author</th>
+      <th>price</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of books">
+      <td>{{b.name}}</td>
+      <td>{{b.author}}</td>
+      <td>{{b.price}}</td>
+      <td>{{b.rating}}</td>
+    </tr>
+  </tbody>
+</table>

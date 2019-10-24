@@ -1,0 +1,12 @@
+<div class="parent">
+  <h1>Parent</h1>
+  <input type="text" (change)='dataToPass=$event.target.value'><br>
+  msg from child = {{msgFromChild}}
+</div>
+
+<div class="child">
+  <app-child [dataFromParent]='dataToPass'
+             (childNotify)="onNotify($event)">
+</app-child>
+</div>
+
