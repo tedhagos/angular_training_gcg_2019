@@ -1,0 +1,12 @@
+<div class="parent">
+  <h1>Parent Comp</h1>
+  <input type="text" (change)='passData($event.target.value)'><br>
+  <h3>message from Child : {{msgFromChild}}</h3>
+</div>
+
+
+<div class="child">
+  <app-child [dataFromParent]='passToChild'
+             (onNotify)="processData($event)">
+  </app-child>
+</div>

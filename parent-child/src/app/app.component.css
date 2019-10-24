@@ -1,0 +1,16 @@
+* {
+  font-family: sans-serif;
+}
+
+.parent {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid gray;
+}
+
+
+.child {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid blue;
+}
