@@ -11,12 +11,18 @@ export class AppComponent {
   book: {};
 
   clickBook(booktext) {
+    booktext = booktext.toLocaleLowerCase().trim();
     console.log(booktext);
     let booksCopy = [...this.books];
-    let tempBooks = [];
     console.log(booksCopy);
-    tempBooks = booksCopy.filter(book => book.name.indexOf(booktext) !== -1);
-    console.log(tempBooks);
+    // booksCopy = booksCopy.filter((book) => {
+    //   book.name.toLocaleLowerCase().indexOf(booktext) !== -1;
+    //   console.log(`book name is : ${book.name.toLocaleLowerCase()}`);
+    // });
+
+    this.book = booksCopy.find((book)=> book.name.toLocaleLowerCase() === booktext);
+    console.log(booksCopy);
+    
   }
 
   books: any[] = 
