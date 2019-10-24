@@ -1,0 +1,19 @@
+* {
+  font-family: sans-serif;
+}
+
+
+
+#container {
+  display: flex;
+}
+
+#booklist {
+  flex-grow: 0;
+}
+#bookdetail {
+  padding: 1em;
+  margin-left: 1em;
+  border: 1px solid gray;
+  flex-grow: 1;
+}
