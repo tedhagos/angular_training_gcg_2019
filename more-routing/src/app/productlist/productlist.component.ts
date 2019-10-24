@@ -1,36 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-productlist',
+  templateUrl: './productlist.component.html',
+  styleUrls: ['./productlist.component.css']
 })
-export class AppComponent {
-  title = 'Filtering in Angular';
-  
-  filter: string;
-  filteredBooks: any[];
+export class ProductlistComponent implements OnInit {
 
-  constructor() {
-    this.filteredBooks = [...this.books];
-  }
+  constructor() { }
 
-  onFilter(filter) {
-    console.log(`filter search = ${filter}`);
-    this.filteredBooks = [...this.books];
-    this.filteredBooks = this.filteredBooks.filter((book) => 
-      book.name.toLocaleLowerCase().indexOf(filter) !== -1
-    );
-    console.log(this.filteredBooks);
-  }
-
-  // testMethod() {
-  //   let arr = [1,2,3,4,5,6,7,8,9];
-  //   let arr2 = arr.filter( num =>  num > 2);
-  //   console.log(arr2);
-  // }
-
-  books: any[] = [
+  books: any[] = 
+    [
       {
         "id": 1,
         "name": "The C Programming language",
@@ -96,4 +76,8 @@ export class AppComponent {
         "image": "fullstack-javascript.jpg"
       }
     ]
+
+  ngOnInit() {
+  }
+
 }

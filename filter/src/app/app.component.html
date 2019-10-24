@@ -1,7 +1,7 @@
 
-<input type="text" (change)="onFilter($event.target.value)">
+<input type="text" (input)="onFilter($event.target.value)">
 <hr>
-<table>
+<table *ngIf="filteredBooks">
   <thead>
     <tr>
       <th>name</th>
@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let b of books">
+    <tr *ngFor="let b of filteredBooks">
       <td>{{b.name}}</td>
       <td>{{b.author}}</td>
       <td>{{b.price}}</td>
@@ -19,3 +19,4 @@
     </tr>
   </tbody>
 </table>
+
