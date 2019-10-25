@@ -1,0 +1,27 @@
+
+<div #search>
+  <input type="text" placeholder="filter..." 
+  (keyup)="filterBooks($event.target.value)">
+</div>
+
+<hr>
+<table *ngIf="books">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <td>Book</td>
+      <td>Author</td>
+      <td>Price</td>
+      <td>Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of tempbooks">
+      <td><a [routerLink]="['/bookdetail', b.id]">{{b.id}}</a></td>
+      <td><a [routerLink]="['/bookdetail', b.id]">{{b.name}}</a></td>
+      <td>{{b.author}}</td>
+      <td>{{b.price | currency:'USD':'symbol':'1.2-2'}}</td>
+      <td>{{b.rating}}</td>
+    </tr>
+  </tbody>
+</table>
