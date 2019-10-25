@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { NumtostarsPipe } from './numtostars.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooklistComponent,
     BookdetailComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    NumtostarsPipe
   ],
   imports: [
     BrowserModule,

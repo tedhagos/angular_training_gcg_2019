@@ -2,9 +2,15 @@
 <div *ngIf="book">
 
   <h1>{{book.name}}</h1>
-  {{book.author}} <br>
-  {{book.price}} <br>
-  {{book.rating}} <br>
+
+  <fieldset>
+    <label>Author : </label> {{book.author}} <br>
+    <label>Price  : </label>{{book.price | currency:'USD':'symbol':'1.2-2'}} <br>
+    <label>Rating : </label>{{book.rating | numtostars}} <br>
+  </fieldset>
+
+  <button (click)="goBack()">Back</button>
+
 </div>
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookserviceService } from '../bookservice.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 
 @Component({
@@ -11,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class BookdetailComponent implements OnInit {
 
   constructor(private bserv: BookserviceService,
-              private route: ActivatedRoute) {   
+              private route: ActivatedRoute,
+              private router: Router) {   
               }
 
   book: {};
@@ -22,4 +24,7 @@ export class BookdetailComponent implements OnInit {
     this.book = this.bserv.getBook(+bookid);
   }
 
+  goBack() {
+    this.router.navigate(['/booklist']);
+  }
 }

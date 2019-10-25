@@ -21,7 +21,7 @@
       <td><a [routerLink]="['/bookdetail', b.id]">{{b.name}}</a></td>
       <td>{{b.author}}</td>
       <td>{{b.price | currency:'USD':'symbol':'1.2-2'}}</td>
-      <td>{{b.rating}}</td>
+      <td>{{b.rating | numtostars }}</td>
     </tr>
   </tbody>
 </table>
