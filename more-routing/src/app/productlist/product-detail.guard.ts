@@ -13,7 +13,7 @@ export class ProductDetailGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       let retval = true;
-      let id = parseInt(next.url[1].path);
+      let id = +next.url[1].path;
       if(isNaN(id) || id < 1) {
         console.log("Invalid route");
         this.route.navigate(['/pagenotfound']);
