@@ -1,5 +1,7 @@
 
 <div *ngIf="bookDetail">
   <h1>{{bookDetail.name}}</h1>
-  
+  Author : {{bookDetail.author}} <br>
+  Price  : {{bookDetail.price | currency:'USD':true}} <br>
+  Rating : {{bookDetail.rating}}
 </div>

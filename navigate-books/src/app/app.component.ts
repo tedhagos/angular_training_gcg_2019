@@ -15,10 +15,6 @@ export class AppComponent {
     console.log(booktext);
     let booksCopy = [...this.books];
     console.log(booksCopy);
-    // booksCopy = booksCopy.filter((book) => {
-    //   book.name.toLocaleLowerCase().indexOf(booktext) !== -1;
-    //   console.log(`book name is : ${book.name.toLocaleLowerCase()}`);
-    // });
 
     this.book = booksCopy.find((book)=> book.name.toLocaleLowerCase() === booktext);
     console.log(booksCopy);
