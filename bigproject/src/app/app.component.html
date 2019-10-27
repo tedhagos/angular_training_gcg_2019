@@ -1,4 +1,13 @@
 
-<h1>{{pageTitle}}</h1>
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <a [routerLink]="['/booklist']">Home</a>
+    </div>
+    <ul class='nav navbar-nav'>
+      <li class='active'><a [routerLink]="">Add Book</a></li>
+    </ul>
+  </div>
+</nav>
 
 <router-outlet></router-outlet>

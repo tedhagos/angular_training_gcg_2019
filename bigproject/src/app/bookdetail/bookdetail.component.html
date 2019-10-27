@@ -1,18 +1,18 @@
-
-<div *ngIf="book">
-
-  <h1>{{book.name}}</h1>
-
-  <fieldset>
-    <label>Author : </label> {{book.author}} <br>
-    <label>Price  : </label>{{book.price | currency:'USD':'symbol':'1.2-2'}} <br>
-    <label>Rating : </label>{{book.rating | numtostars}} <br>
-    <img src="/assets/img/{{book.imageUrl}}" title="{{book.name}}">
-  </fieldset>
-
-  <button (click)="goBack()">Back</button>
-
+<div class='card mx-auto' *ngIf="book">
+  <img src="/assets/img/{{book.image}}" title="{{book.name}}" class='card-img-top'>
+  <div class='card-body'>
+    <h4>{{book.name}}</h4>
+    <ul>
+      <li><strong>Author: </strong>{{book.author}}</li>
+      <li>Price: {{book.price}}</li>
+      <li>Rating: {{book.rating | numtostars}}</li>
+    </ul>
+  </div>
 </div>
+
+
+<button (click)="goBack()" class='btn btn-outline-primary'>Back</button>
+
 
 
 

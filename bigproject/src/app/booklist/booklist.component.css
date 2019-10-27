@@ -1,0 +1,15 @@
+/* @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css"; */
+
+* {
+  font-family: sans-serif;
+}
+
+div.card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table {
+  margin-top: 1rem;
+}

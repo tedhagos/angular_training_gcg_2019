@@ -7,6 +7,8 @@ import { BooklistComponent } from './booklist/booklist.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NumtostarsPipe } from './numtostars.pipe';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { NumtostarsPipe } from './numtostars.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

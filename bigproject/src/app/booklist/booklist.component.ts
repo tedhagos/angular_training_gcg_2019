@@ -8,15 +8,21 @@ import { BookserviceService } from '../bookservice.service';
 })
 export class BooklistComponent implements OnInit {
 
-  books: any[];
-  tempbooks: any[];
+  books;
+  tempbooks;
 
   constructor(private service: BookserviceService) {
-    this.tempbooks = service.getBooks();
+
    }
 
   ngOnInit() {
-    this.books = this.service.getBooks();
+    this.service.getBooks().subscribe(
+      books => {
+        this.books = books;
+        this.tempbooks = this.books;  
+      },
+      error => console.log(error)
+    );
   }
 
   filterBooks(search) {
