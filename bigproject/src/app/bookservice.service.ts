@@ -7,10 +7,12 @@ import { HttpClient} from '@angular/common/http';
 })
 export class BookserviceService implements OnInit {
 
-  booksUrl: string = "/api/books.json";
+  // booksUrl: string = "/api/books.json";
+  booksUrl: string = "http://localhost:3000/books";
   books: any[];
 
   tempbooks: any[];
+  
   constructor(private http:HttpClient) {
     
   }
@@ -20,9 +22,7 @@ export class BookserviceService implements OnInit {
   }
 
   getBook(id) {
-    // let tempbooks = this.books;
-    // return this.tempbooks.find((book) => book.id === id);
-    // let tempbooks = this.getBooks()
+    return this.http.get(`${this.booksUrl}/${id}`);
   }
 
   getBooks():Observable<any>{

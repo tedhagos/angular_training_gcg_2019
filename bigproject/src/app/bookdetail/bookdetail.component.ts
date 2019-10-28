@@ -18,32 +18,15 @@ export class BookdetailComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router) {   
 
-      let bookid = this.route.snapshot.paramMap.get('id');
-      console.log(`bookid= ${bookid}`);
-      this.bserv.getBooks().subscribe(
-        books =>  {
-          this.books = books;
-          this.book = books.find((book) => book.id === +bookid);
-          // console.log(books);
-          console.log(this.book);
-        },
+      let bookid = this.route.snapshot.paramMap.get('id');      
+      bserv.getBook(bookid).subscribe(
+        book => this.book = book,
         error => console.log(error)
       );
   }
 
-
-
   ngOnInit() {
-    // let bookid = this.route.snapshot.paramMap.get('id');
-    // console.log(bookid);
-    // // this.book = this.bserv.getBook(+bookid);
-    // this.bserv.getBooks().subscribe(
-    //   books =>  {
-    //     this.books = books;
-    //     this.book = books.find(book => book.id === bookid);
-    //   },
-    //   error => console.log(error)
-    // );
+
   }
 
   goBack() {
