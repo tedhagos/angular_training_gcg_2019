@@ -12,7 +12,6 @@ export class BooklistComponent implements OnInit {
   tempbooks;
 
   constructor(private service: BookserviceService) {
-
    }
 
   ngOnInit() {

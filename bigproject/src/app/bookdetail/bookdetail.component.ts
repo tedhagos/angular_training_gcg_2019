@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BookserviceService } from '../bookservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './bookdetail.component.html',
   styleUrls: ['./bookdetail.component.css']
 })
-export class BookdetailComponent implements OnInit {
+export class BookdetailComponent {
   
   book: {};
   books: any[];
@@ -23,10 +23,6 @@ export class BookdetailComponent implements OnInit {
         book => this.book = book,
         error => console.log(error)
       );
-  }
-
-  ngOnInit() {
-
   }
 
   goBack() {
