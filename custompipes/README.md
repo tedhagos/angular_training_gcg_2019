@@ -1,27 +1,49 @@
-# Custompipes
+# Custom Pipes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
-## Development server
+You can create your very own custom pipes in Angular by following
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Create a pipe
+2. Register it in the *app.module.ts*
+3. Use the pipe name wherever you want to transform any piece of data in your app
 
-## Code scaffolding
+You can create a pipe file (and register it too) by using the Angular CLI. So, while you're still inside the project folder, do this on the command line
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng g p numtostars
+```
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Additional notes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To add the Bootstrap CSS to the project, I added it via NPM
 
-## Running end-to-end tests
+```
+npm install bootstrap -save
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Then in the project's *angular.json* config file, I added a reference to the Bootstrap CSS file, like this
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+  "architect": {
+    "build": {
+      "builder": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/custompipes",
+        "index": "src/index.html",
+        "main": "src/main.ts",
+        "polyfills": "src/polyfills.ts",
+        "tsConfig": "tsconfig.app.json",
+        "aot": false,
+        "assets": [
+          "src/favicon.ico",
+          "src/assets"
+        ],
+        "styles": [
+          "src/styles.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
+        "scripts": []
+      },
+```

@@ -1,21 +1,21 @@
 
 
-<table>
+
+<table class='table'>
   <thead>
     <tr>
       <th>number</th>
       <th>English</th>
-      <th>Espanol</th>
+      <th>In Stars</th>
     </tr>
   </thead>
     <tbody>
       <tr *ngFor="let num of numbers">
         <td>{{num}}</td>
         <td>{{num | numToEnglish }}</td>
-        <td>{{num}}</td>
+        <td>{{num | numToStars}}</td>
       </tr>
     </tbody>
 
 </table>
 
-<h2>{{"apple" | testpipe:"a":"XX" }}</h2>
